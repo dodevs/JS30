@@ -1,0 +1,29 @@
+:root{
+    --baseColor: #fff45f;
+    --blurValue: 0.0rem;
+    --border: 0rem;
+}
+
+body{
+    text-align: center;
+}
+
+body {
+    background: #193549;
+    color: white;
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 20px;
+}
+
+#js {
+    color: var(--baseColor);
+}
+
+img {
+    margin: 50px auto;
+    height: 400px;
+    width: auto;
+    border: var(--border) var(--baseColor) solid;
+    filter: blur(var(--blurValue));
+    transition: all 500ms;
+}
