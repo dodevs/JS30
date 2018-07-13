@@ -20,24 +20,20 @@ function findMatches(search, cities){
     })
 }
 
+function displayMatches(){
+    const matchArray = findMatches(this.value, cities);
+    const html = matchArray.map( place => {
+        return `
+            <li>
+                <span class="name">${place.city}, ${place.state}</span>
+                <span class="population">${place.population}</span>
+            </li>
+        `;
+    });
+    suggestions.innerHTML = html;
+}
+
 const searchInput = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
 
-function addToSuggestion(searchResult){
-    let citstLi = document.createElement('li');
-    citstLi.textContent = searchResult.city;
-    suggestions.appendChild(citstLi);
-}
-
-searchInput.addEventListener('input', function(ev){
-    let serachText = ev.target.value;
-    if(serachText.length > 0){
-        suggestions.innerHTML = '';
-        let results = findMatches(serachText, cities);
-        results.forEach( result => {
-            addToSuggestion(result);
-        });
-    }else{
-        suggestions.innerHTML = '';
-    }
-})
+searchInput.addEventListener('input', displayMatches);
