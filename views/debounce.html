@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Debounce teste</title>
+</head>
+<body>
+    <button id="simplesbtn">Click</button>
+    <script>
+        function exibirMSG(){
+            console.log("Fui clicado");
+        }
+        //Debounve v1
+        //(função, tempo de espera)
+        function debounce(fn, milissegundos) {
+            let timer = 0; //nenhum timeout definido
+            return () => {
+                clearTimeout(timer); //Elimina o timout antigo
+                timer = setTimeout(fn, milissegundos); //Cria um novo timeout
+            }
+        }
+
+        const btn = document.querySelector('#simplesbtn');
+        btn.addEventListener('click', debounce(exibirMSG, 2000));
+    </script>
+</body>
+</html>
