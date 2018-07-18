@@ -23,9 +23,9 @@ function draw(ev){
     ctx.lineTo(ev.offsetX, ev.offsetY); //Desenha linha até determinada posição
     ctx.stroke(); //Contorna o caminho que foi desenhado
     [lastX, lastY] = [ev.offsetX, ev.offsetY]; //Atribuição multipla
-    hue <= 360? hue+=1: hue = 0; //Incrementa a variável
+    hue <= 360? hue+=2: hue = 0; //Incrementa a variável
 
-    if (ctx.lineWidth >= 500 || ctx.lineWidth <= 1){
+    if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1){
         direction = !direction;
     }
     if(direction){

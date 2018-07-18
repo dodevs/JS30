@@ -1,0 +1,26 @@
+html{
+    color:black;
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+}
+
+h1{
+    /* x = deslocamento X
+    /* y = deslocamento Y
+    /* d = raio de desfoque
+    /* color = cor a ser usada 
+    /* ----------- x -- y - d -----color----- */
+    text-shadow: 10px 10px 0px rgba(0,0,0,1);
+    font-size: 100px;
+}
