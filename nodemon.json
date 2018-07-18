@@ -1,0 +1,8 @@
+{
+    "restartable": "rs",
+    "verbose": true,
+    "watch": [
+        "views", "server.js"
+    ],
+    "ext": "js,json,html"
+}
