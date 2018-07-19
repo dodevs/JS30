@@ -1,4 +1,6 @@
 const triggers = document.querySelectorAll('a');
+const triggersParent = document.querySelector('.triggersParent');
+
 const highlight = document.createElement('span');
 
 highlight.classList.add('highlight');
@@ -21,5 +23,9 @@ function highlightlink(){
     highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
 }
 
-/* */
-triggers.forEach(a => a.addEventListener('mouseenter', highlightlink));
+/* Improve performance */
+triggersParent.addEventListener('mousemove', (e) => {
+    if(e.target.tagName === "A"){
+        highlightlink.call(e.target);
+    }
+});
