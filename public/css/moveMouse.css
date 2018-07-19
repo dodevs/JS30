@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    color:black;
+    color:rgba(0,0,0,0.7);
 }
 
 h1{
@@ -21,6 +21,6 @@ h1{
     /* d = raio de desfoque
     /* color = cor a ser usada 
     /* ----------- x -- y - d -----color----- */
-    text-shadow: 10px 10px 0px rgba(0,0,0,1);
+    /*text-shadow: 10px 10px 0px rgba(0,0,0,1);*/
     font-size: 100px;
 }
