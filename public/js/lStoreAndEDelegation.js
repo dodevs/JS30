@@ -42,7 +42,7 @@ function populateLis(platesList, plates = []){
 }
 
 function toggleDone(ev){
-  if (!)
+  //if (!ev.target.matches('input')) return;
   const item = ev.target;
   items[item.dataset.index].done = item.checked;
   storeItems(items);
